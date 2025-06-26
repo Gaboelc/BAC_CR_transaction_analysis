@@ -10,6 +10,9 @@ export_path = '../data/Cleaned_data/'
 raw_path = '../data/Raw_data/'
 archived_path = '../data/Archived_data/'
 
+for path in (export_path, raw_path, archived_path):
+    os.makedirs(path, exist_ok=True)
+
 def procesar_archivo(filepath):
     df = pd.read_csv(
         filepath,
